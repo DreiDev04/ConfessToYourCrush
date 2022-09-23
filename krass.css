@@ -1,0 +1,332 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+:root {
+  --clr-bg: #495D6A;
+  --clr-btn: #A7B8C3;
+  --clr-cont: #5B7586;
+  --clr-shadow: #36454F;
+
+  --ff-primary: 'Roboto Condensed', sans-serif;
+  --ff-secondary: 'Love Ya Like A Sister', cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 120vh;
+  color: white;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* a{
+  
+} */
+
+/*
+  7. Remove built-in form typography styles
+*/
+/* input, button, textarea, select {
+  padding: 0;
+  font: inherit;
+  font: inherit;
+} */
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  /* background-color: var(--clr-bg); */
+  background-image: linear-gradient( 358.4deg,  rgba(249,151,119,1) -2.1%, rgba(98,58,162,1) 90% );
+}
+.cont{
+  /* outline: solid red 1px; */
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--clr-cont);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.container h1{
+  font-size: 32px;
+  margin-bottom: 1rem;
+  font-family: var(--ff-primary);
+  
+
+}
+.container p{
+  font-size: 20px;
+  font-family: var(--ff-secondary);
+}
+.button_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  /* border: red 2px solid; */
+}
+.buttons{
+  width: 5rem;
+  height: 2rem;
+  border: red 2px solid;
+  background-color: var(--clr-btn);
+  font-family: var(--ff-primary);
+}
+.buttons:hover{
+  border:  black 2px solid;;
+}
+
+.no_button_cont{
+  position: relative;
+  /* border: red 2px solid; */
+  height: 40%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  
+  gap: 1rem ;
+  justify-content: center;
+}
+.group1{
+  position: absolute;
+  right: 25%;
+  z-index: 1001;
+}
+.group2{
+  position: absolute;
+  right: 25%;
+  top: 80%;
+}
+
+#btn_yes{
+  width: 5rem;
+  height: 2rem;
+  border: green 2px solid;
+  background-color: var(--clr-btn);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  font-family: var(--ff-primary);
+  
+}
+
+#arrow_up{
+  position: absolute;
+  width: 60px;
+  left: 30%;
+  top: 90%;
+  opacity: 0;
+  z-index: 1001;
+  animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-20px);}
+	60% {transform: translateY(-15px);}
+}
+
+#COMA{
+  position: absolute;
+  width: 300px;
+  top: 10%;
+  left: 10%;
+  opacity: 0;
+}
+
+#sad_cat1{
+  position: absolute;
+  width: 200px;
+  top: 10%;
+  left: 65%;
+  opacity: 0;
+}
+#sadboi{
+  width: 200px;
+  position: absolute;
+  right: 40%;
+  opacity: 0;
+}
+#rain_sad{
+  position: absolute;
+  width: 200px;
+  bottom: 10%;
+  left: 20%;
+  opacity: 0;
+}
+#sad_draw{
+  width: 200px;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  opacity: 0;
+}
+
+
+.attribution{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 100vh;
+  font-family: var(--ff-primary);
+  color: white;
+}
+.attribution a , a:visited{
+  font-family: var(--ff-primary);
+  color: black;
+}
+.attribution a:hover{
+  color: white;
+}
+
+
+/*Button Oppacity Down*/
+
+#btn1{
+  opacity: 0;
+}
+#btn2{
+  opacity: 0;
+}
+#btn3{
+  opacity: 0;
+}
+#btn4{
+  opacity: 0;
+}
+#btn5{
+  opacity: 0;
+}
+#btn6{
+  opacity: 0;
+}
+#btn7{
+  opacity: 0;
+}
+#btn8{
+  opacity: 0;
+}
+#btn9{
+  opacity: 0;
+}
+#btn10{
+  opacity: 0;
+}
+#btn11{
+  opacity: 0;
+}
+#btn12{
+  opacity: 0;
+}
+/*Button Oppacity Down 2*/
+
+#bttn1{
+  opacity: 0;
+}
+#bttn2{
+  opacity: 0;
+}
+#bttn3{
+  opacity: 0;
+}
+#bttn4{
+  opacity: 0;
+}
+#bttn5{
+  opacity: 0;
+}
+#bttn6{
+  opacity: 0;
+}
+#bttn7{
+  opacity: 0;
+}
+#bttn8{
+  opacity: 0;
+}
+#bttn9{
+  opacity: 0;
+}
+#bttn10{
+  opacity: 0;
+}
+#bttn11{
+  opacity: 0;
+}
+#bttn12{
+  opacity: 0;
+}
